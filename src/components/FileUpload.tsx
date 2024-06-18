@@ -31,6 +31,7 @@ const FileUpload = () => {
 
             try {
                 setUploading(true)
+                console.log("upload to S3")
                 const data = await uploadToS3(file)
                 // console.log("data", data)
                 if (!data?.file_key || !data.file_name){

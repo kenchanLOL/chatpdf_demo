@@ -29,7 +29,7 @@ export async function getContext(query: string, file_key: string){
     // const matched_docs = matches.filter(
     //     (match) => match.score && match.score > 0.7
     // )
-    // console.log(matches, matched_docs)
+    console.log(matched_docs)
     type Metadata = {
         text: string,
         pageNumber: number

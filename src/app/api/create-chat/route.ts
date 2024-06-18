@@ -16,6 +16,7 @@ export async function POST(req: Request, res:Response) {
     try{
         const body = await req.json()
         const {file_key, file_name} = body
+        console.log("load S3 to Pincone")
         await loadS3IntoPincone(file_key)
 
         const chat_id = await db

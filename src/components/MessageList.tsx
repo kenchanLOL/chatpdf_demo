@@ -1,6 +1,7 @@
 import React from 'react'
 import {Message} from '@ai-sdk/ui-utils'
 import {cn} from "@/lib/utils";
+import ReactMarkdown from 'react-markdown';
 
 type Props = {
     messages: Message[]
@@ -27,7 +28,7 @@ const MessageList = ({messages} : Props) => {
                                 }
                             )}
                         >
-                        <p>{message.content}</p>
+                        <ReactMarkdown className="markdown">{message.content}</ReactMarkdown>
                         </div>
                     </div>
                 )
