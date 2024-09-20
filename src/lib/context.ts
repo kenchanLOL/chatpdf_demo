@@ -34,6 +34,6 @@ export async function getContext(query: string, file_key: string){
         text: string,
         pageNumber: number
     }
-    let docs = matched_docs.map( (match) => (match.metadata as Metadata).text)
-    return docs.join("\n").substring(0, 3000)
+    let docs = matched_docs?.map( (match) => (match.metadata as Metadata).text)
+    return docs?.join("\n").substring(0, 3000)
 }
